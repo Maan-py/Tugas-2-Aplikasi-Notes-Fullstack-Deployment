@@ -1,0 +1,218 @@
+@layer {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    block-size: 100%;
+  }
+
+  body {
+    min-block-size: 100%;
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  img,
+  iframe,
+  audio,
+  video,
+  canvas {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  svg {
+    max-inline-size: 100%;
+  }
+
+  svg:not([fill]) {
+    fill: currentColor;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  fieldset,
+  iframe {
+    border: none;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+    font-variant-numeric: proportional-nums;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-variant-numeric: lining-nums;
+  }
+
+  p,
+  blockquote,
+  q,
+  figcaption,
+  li {
+    hanging-punctuation: first allow-end last;
+  }
+
+  input,
+  label,
+  button,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1;
+  }
+
+  math,
+  time,
+  table {
+    font-variant-numeric: tabular-nums lining-nums slashed-zero;
+  }
+
+  code {
+    font-variant-numeric: slashed-zero;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  abbr {
+    font-variant-caps: all-small-caps;
+    text-decoration: none;
+
+    &[title] {
+      cursor: help;
+      text-decoration: underline dotted;
+    }
+  }
+
+  sup,
+  sub {
+    line-height: 0;
+  }
+
+  :disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+
+  :focus-visible {
+    outline-offset: 0.2rem;
+  }
+}
+
+/* Start */
+.title {
+  text-align: center;
+}
+
+.note-input {
+  border: 1px solid gray;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  gap: 10px;
+
+  input {
+    max-width: fit;
+    padding: 5px;
+  }
+
+  textarea {
+    padding: 5px;
+  }
+
+  .add-button {
+    max-width: fit-content;
+    padding: 5px 8px;
+    background-color: #0d6efd;
+    border: 1px solid white;
+    border-radius: 3px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.note-input [placeholder]::placeholder {
+  padding: 10px;
+}
+
+.note-list {
+  margin: 15px;
+  border: 1px solid gray;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 3px;
+}
+
+.note-item {
+  border: 1px solid gray;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.actions button {
+  padding: 5px 8px;
+}
+
+.actions button[data-action="Edit"] {
+  background-color: #ffc107;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.actions button[data-action="Delete"] {
+  background-color: #dc3545;
+  border: 1px solid white;
+  border-radius: 3px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
