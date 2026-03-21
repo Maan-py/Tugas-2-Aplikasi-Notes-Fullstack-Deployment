@@ -160,6 +160,7 @@ noteForm.addEventListener("submit", async (e) => {
 
   if (editId) {
     await editNoteById(editId, titleInput.value, contentInput.value);
+    delete noteForm.dataset.editId;
   } else {
     await createNote(titleInput.value, contentInput.value);
   }
