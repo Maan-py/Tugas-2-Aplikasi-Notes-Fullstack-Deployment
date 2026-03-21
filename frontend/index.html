@@ -11,12 +11,12 @@
 <body>
     <h1 class="title">Notes App</h1>
     <form class="note-input">
-        <input type="text" placeholder="Title">
-        <textarea name="" id="" placeholder="Write your notes"></textarea>
+        <input type="text" placeholder="Title" required>
+        <textarea name="" id="" placeholder="Write your notes" required></textarea>
         <button class="add-button">Add Note</button>
     </form>
-    <div class="note-list">
-        <div class="note-item">
+    <div class="note-list" id="note-list">
+        <!-- <div class="note-item">
             <div class="content">
                 <h2>Title 1</h2>
                 <p>Content</p>
@@ -37,8 +37,9 @@
                 <button type="button" data-action="Edit">Edit</button>
                 <button type="button" data-action="Delete">Delete</button>
             </div>
-        </div>
+        </div> -->
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

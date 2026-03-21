@@ -2,13 +2,13 @@ const Note = require("../schema/Note");
 
 const getAll = async () => {
   return await Note.findAll({
-    attributes: ["id", "title", "content", "createdAt"],
+    attributes: ["id", "title", "content", "createdAt", "updatedAt"],
   });
 };
 
 const getById = async (id) => {
   return await Note.findByPk(id, {
-    attributes: ["id", "title", "content", "createdAt"],
+    attributes: ["id", "title", "content", "createdAt", "updatedAt"],
   });
 };
 

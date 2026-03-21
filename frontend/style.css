@@ -144,6 +144,7 @@
 /* Start */
 .title {
   text-align: center;
+  margin-top: 20px;
 }
 
 .note-input {
@@ -215,4 +216,8 @@
   font-weight: bold;
   color: white;
   cursor: pointer;
+}
+
+.empty-note {
+  text-align: center;
 }
