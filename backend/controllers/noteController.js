@@ -6,11 +6,13 @@ const createNote = async (req, res) => {
     const result = await noteModel.create({ title, content });
 
     return res.status(201).json({
+      success: true,
       message: "Note created successfully",
       data: result,
     });
   } catch (error) {
     return res.status(500).json({
+      success: false,
       message: "Error creating note",
       error: error.message,
     });
@@ -21,11 +23,13 @@ const getAllNotes = async (req, res) => {
   try {
     const result = await noteModel.getAll();
     return res.status(200).json({
+      success: true,
       message: "All notes retrieved successfully",
       data: result,
     });
   } catch (error) {
     return res.status(500).json({
+      success: false,
       message: "Error retrieving notes",
       error: error.message,
     });
@@ -44,11 +48,13 @@ const getNoteById = async (req, res) => {
     }
 
     return res.status(200).json({
+      success: true,
       message: "Note retrieved successfully",
       data: result,
     });
   } catch (error) {
     return res.status(500).json({
+      success: false,
       message: "Error retrieving note",
       error: error.message,
     });
@@ -64,15 +70,18 @@ const updateNoteById = async (req, res) => {
 
     if (!result) {
       return res.status(404).json({
+        success: false,
         message: "Note not found",
       });
     }
 
     return res.status(200).json({
+      success: true,
       message: "Note updated successfully",
     });
   } catch (error) {
     return res.status(500).json({
+      success: false,
       message: "Error updating note",
       error: error.message,
     });
@@ -87,15 +96,18 @@ const deleteNoteById = async (req, res) => {
 
     if (!result) {
       return res.status(404).json({
+        success: false,
         message: "Note not found",
       });
     }
 
     return res.status(200).json({
+      success: true,
       message: "Note deleted successfully",
     });
   } catch (error) {
     return res.status(500).json({
+      success: false,
       message: "Error deleting note",
       error: error.message,
     });
