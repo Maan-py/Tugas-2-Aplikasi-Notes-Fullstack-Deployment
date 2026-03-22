@@ -14,7 +14,7 @@ app.use("/api/notes", noteRoutes);
 const port = process.env.port;
 
 sequelize.sync().then(() => {
-  console.log("Database connected successfully");
+  console.log(`Database connected successfully on ${process.env.DB_HOST}`);
   app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
   });
