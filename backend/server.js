@@ -11,7 +11,7 @@ app.use(cors());
 require("./schema/Note");
 app.use("/api/notes", noteRoutes);
 
-const port = process.env.port;
+const port = process.env.port || 3000;
 
 sequelize.sync().then(() => {
   console.log(`Database connected successfully on ${process.env.DB_HOST}`);
